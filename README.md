@@ -18,7 +18,7 @@ Haizhou Shi, Hao Wang<br>
 * [Related Work](#also-check-our-relevant-work-on-domain-adaptation)
 * [References](#references)
 
-## How does UDIL unify existing methods?
+## How does UDIL Unify Existing Methods?
 Long story short, in the paper, we start by re-iterating the learning objective of domain-incremental learning (which is also true for other types of continual learning). Then we propose to combine three ways of upper bounding the past-domain error (ERM, intra-domain bound, and cross-domain bound, see Chapter 3 in the paper) and assign adaptive coefficients to each of the upper bound training terms. 
 
 Here is the main theorem of our paper, which not only leads to the unification of the current domain-incremental learning methods, but allows for the possibility of minimizing a tighter bound in the next chapter.
@@ -31,7 +31,7 @@ The first main argument of our work is that, by fixating the value of the coeffi
 <img src="fig/unification.png" alt="" data-canonical-src="fig/unification.png" width="80%"/>
 </p>
 
-## How does UDIL lead to a tighter bound?
+## How does UDIL Lead to a Tighter Bound?
 A natural question following the unification is: *can we do better than using a single set of fixed coefficients to train a domain-incremental learning model?* The answer is a firmly YES. 
 And what we do in this work is to parameterize the coefficients, and try to optimize a tighter bound by adjusting them during model training. We know you are in a hurry, so here we will give an extremely brief review of what we do to form the final training objective. 
 <p align="center">
@@ -44,7 +44,7 @@ As you can see, there are in total four kinds of differentiable loss terms in ou
 - 🔴 **Adversarial Feature Alignment Loss:** it corresponds to the <span style="color:red">divergence terms</span> between the current data distribution and the past data distribution. If you are interested in how minimizing this term on the feature space can improve the performance in general, please refer to the amazing work ["A theory of learning from different domains"](https://link.springer.com/article/10.1007/s10994-009-5152-4).
 - ⚪ **Adaptive Coefficient Optimization:** it corresponds to estimating the error (classification accuracy) of each term, and adaptively minimizing the <span style="color:gray">coefficient set</span> $\Omega=\{\alpha_i, \beta_i, \gamma_i\}$. 
 
-## Installing the required packages
+## Installing the Required Packages
 ```sh
 conda create -n udil python=3.9
 conda activate udil
@@ -52,7 +52,7 @@ conda install pytorch==1.12 torchvision cudatoolkit=11.3 -c pytorch
 conda install wandb ipdb -c conda-forge
 ```
 
-## Code for running UDIL
+## Code for Running UDIL
 Before you run the code, there are a couple of settings you might want to modify: 
 - `wandb_entity`: at `utils/args.py` line 70, change to your own wandb account;
 - `data_path` and `base_path`: at `utils/conf` line 13-23, change to whatever path you want to store your data and local training logs.
