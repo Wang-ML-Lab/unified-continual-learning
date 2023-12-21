@@ -6,7 +6,7 @@ playground*.ipynb
 *.pdf
 data/
 checkpoints/
-*.png
+# *.png
 wandb
 *.csv
 *.pkl
