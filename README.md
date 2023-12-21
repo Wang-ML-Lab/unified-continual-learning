@@ -39,10 +39,10 @@ And what we do in this work is to parameterize the coefficients, and try to opti
 </p>
 As you can see, there are in total four kinds of differentiable loss terms in our proposed algorithm: 
 
-- 🔵 <span style="color:blue">Cross-Entropy Classification Loss</span>: it corresponds to the simple <span style="color:blue">ERM terms</span> on the current data and the memory.
-- 🟢 <span style="color:green">Cross-Entropy Distillation Loss</span>: it corresponds to the <span style="color:green">distillation loss terms</span>  between the current model $h$ and the history model $H_{t-1}$, computed on the current data and the memory.
-- 🔴 <span style="color:red">Adversarial Feature Alignment Loss</span>: it corresponds to the <span style="color:red">divergence terms</span> between the current data distribution and the past data distribution. If you are interested in how minimizing this term on the feature space can improve the performance in general, please refer to the amazing work ["A theory of learning from different domains"](https://link.springer.com/article/10.1007/s10994-009-5152-4).
-- ⚪ <span style="color:gray">Adaptive Coefficient Optimization</span>: it corresponds to estimating the error (classification accuracy) of each term, and adaptively minimizing the <span style="color:gray">coefficient set</span> $\Omega=\{\alpha_i, \beta_i, \gamma_i\}$. 
+- 🔵 **Cross-Entropy Classification Loss:** it corresponds to the simple <span style="color:blue">ERM terms</span> on the current data and the memory.
+- 🟢 **Cross-Entropy Distillation Loss:** it corresponds to the <span style="color:green">distillation loss terms</span>  between the current model $h$ and the history model $H_{t-1}$, computed on the current data and the memory.
+- 🔴 **Adversarial Feature Alignment Loss:** it corresponds to the <span style="color:red">divergence terms</span> between the current data distribution and the past data distribution. If you are interested in how minimizing this term on the feature space can improve the performance in general, please refer to the amazing work ["A theory of learning from different domains"](https://link.springer.com/article/10.1007/s10994-009-5152-4).
+- ⚪ **Adaptive Coefficient Optimization:** it corresponds to estimating the error (classification accuracy) of each term, and adaptively minimizing the <span style="color:gray">coefficient set</span> $\Omega=\{\alpha_i, \beta_i, \gamma_i\}$. 
 
 ## Installing the required packages
 ```sh
