@@ -1,0 +1,12 @@
+__pycache__/
+stashed/
+playground*.ipynb
+*.swp
+*.gif
+*.pdf
+data/
+checkpoints/
+*.png
+wandb
+*.csv
+*.pkl
