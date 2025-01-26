@@ -124,10 +124,17 @@ Hao Wang*, Hao He*, Dina Katabi<br>
 ## References
 [A Unified Approach to Domain Incremental Learning with Memory: Theory and Algorithm](https://arxiv.org/abs/2310.12244)
 ```bib
-@inproceedings{UDIL,
-  title={A Unified Approach to Domain Incremental Learning with Memory: Theory and Algorithm},
-  author={Shi, Haizhou and Wang, Hao},
-  booktitle={Advances in Neural Information Processing Systems},
-  year={2023}
+@inproceedings{shi2023unified,
+author = {Shi, Haizhou and Wang, Hao},
+title = {A unified approach to domain incremental learning with memory: theory and algorithm},
+year = {2023},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {Domain incremental learning aims to adapt to a sequence of domains with access to only a small subset of data (i.e., memory) from previous domains. Various methods have been proposed for this problem, but it is still unclear how they are related and when practitioners should choose one method over another. In response, we propose a unified framework, dubbed Unified Domain Incremental Learning (UDIL), for domain incremental learning with memory. Our UDIL unifies various existing methods, and our theoretical analysis shows that UDIL always achieves a tighter generalization error bound compared to these methods. The key insight is that different existing methods correspond to our bound with different fixed coefficients; based on insights from this unification, our UDIL allows adaptive coefficients during training, thereby always achieving the tightest bound. Empirical results show that our UDIL outperforms the state-of-the-art domain incremental learning methods on both synthetic and real-world datasets. Code will be available at https://github.com/Wang-ML-Lab/unified-continual-learning.},
+booktitle = {Proceedings of the 37th International Conference on Neural Information Processing Systems},
+articleno = {660},
+numpages = {33},
+location = {New Orleans, LA, USA},
+series = {NIPS '23}
 }
 ```
